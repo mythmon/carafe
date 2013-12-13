@@ -1,0 +1,41 @@
+{
+  "name": "carafe",
+  "version": "0.0.0",
+  "description": "A reusable set of D3.js graphs and utilities.",
+  "keywords": [
+    "d3",
+    "visualization",
+    "svg"
+  ],
+  "homepage": "https://github.com/mythmon/carafe",
+  "author": "Mike Cooper <mcooper@mozilla.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mythmon/carafe.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "d3": "~3.3.11",
+    "d3.chart": "https://github.com/misoproject/d3.chart/archive/v0.1.3.tar.gz"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.11",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-browserify": "~1.2.12",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-karma": "~0.6.2",
+    "karma": "~0.10.8",
+    "mocha": "~1.15.1",
+    "karma-mocha": "~0.1.1",
+    "karma-chai": "0.0.2",
+    "karma-browserify": "0.0.6",
+    "karma-phantomjs-launcher": "~0.1.1"
+  },
+  "scripts": {},
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/mythmon/carafe/issues"
+  }
+}

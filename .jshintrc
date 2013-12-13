@@ -1,0 +1,32 @@
+{
+    "undef": true,
+    "strict": false,
+    "browser": true,
+    "loopfunc": true,
+    "asi": false,
+    "eqeqeq": true,
+    "evil": false,
+    "shadow": false,
+    "unused": true,
+    "quotmark": false,
+
+    "globals": {
+        "asyncTest": false,
+        "BrowserDetect": true,
+        "console": false,
+        "d3": false,
+        "deepEqual": false,
+        "equals": false,
+        "module": false,
+        "ok": false,
+        "process": false,
+        "require": false,
+        "setImmediate": false,
+        "setInterval": false,
+        "ShowFor": false,
+        "start": false,
+        "test": false,
+        "tests": false,
+        "window": false
+    }
+}
