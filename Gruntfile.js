@@ -42,6 +42,19 @@ module.exports = function(grunt) {
       unit: {
         configFile: 'karma.conf.js',
       }
+    },
+
+    docco: {
+      docs: {
+        src: ['docs/index.js.md'],
+        options: {
+          layout: 'parallel',
+          output: 'docs/',
+          marked: {
+            gfm: true
+          }
+        }
+      }
     }
   });
 
@@ -50,7 +63,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-karma');
+  grunt.loadNpmTasks('grunt-docco');
 
   grunt.registerTask('default', ['jshint', 'browserify', 'uglify']);
   grunt.registerTask('test', ['jshint', 'karma']);
+  grunt.registerTask('docs', ['docco:docs']);
 };
