@@ -35,8 +35,8 @@ Draws a calendar heatmap.
 data is a list of JavaScript objects with two attributes:
 
 * `date`: JavaScript Date objects
-* `heat`: some number indicating the hotness. For example, you could
-  range from `0` to `255`.
+* `heat`: some number indicating the hotness. the min and max of all heat
+  numbers will be used to figure out the heat range.
 
     var data = [
         {date: new Date(2014, 5, 27), heat: 22},
@@ -53,7 +53,7 @@ week), with a configurable gap.
     var data = [];
     var calendarHeatMap = d3.select('#heatmap')
         .append('svg')
-        .chart('CalendarHeatMap')
+        .chart('CalendarHeatMap');
     calendarHeatMap.draw(data);
 
 
@@ -117,7 +117,7 @@ Argument       | Description
 -------------- | -----------------------------------------------------
 width:         | width of the entire svg. defaults to `1000`.
 height:        | height of the entire svg. defaults to `400`.
-padding:       | the padding for the graph. defaults to `[5, 0, 30, 30]`.
+padding:       | the padding for the graph. it's an array of top, right, bottom, left. defaults to `[5, 0, 30, 30]`.
 specs:         | array of objects
 
 
@@ -126,6 +126,5 @@ Spec objects have the following properties.
 Property       | Description
 -------------- | -----------------------------------------------------
 stroke         | the color to use for making the line
-name           | DOCME
 x              | function that takes a data item and returns x coord
 y              | function that takes a data item and returns y coord
