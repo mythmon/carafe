@@ -1,5 +1,5 @@
-!function(e){"object"==typeof exports?module.exports=e():"function"==typeof define&&define.amd?define(e):"undefined"!=typeof window?window.carafe=e():"undefined"!=typeof global?global.carafe=e():"undefined"!=typeof self&&(self.carafe=e())}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var utils = require('./utils.js');
+!function(e){if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.carafe=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
+var utils = _dereq_('./utils.js');
 
 /* Draws several lines on a graph, based on some data and some specs. */
 module.exports = d3.chart('Base', {
@@ -43,9 +43,9 @@ module.exports = d3.chart('Base', {
     transitionTime: utils.property(700),
 });
 
-},{"./utils.js":6}],2:[function(require,module,exports){
-require('./base.js');
-var utils = require('./utils.js');
+},{"./utils.js":6}],2:[function(_dereq_,module,exports){
+_dereq_('./base.js');
+var utils = _dereq_('./utils.js');
 
 /* A Github Profile style calendar heatmap.
  *
@@ -306,20 +306,20 @@ d3.chart('Base').extend('CalendarHeatMap', {
     date: utils.property(utils.get('date')),
 });
 
-},{"./base.js":1,"./utils.js":6}],3:[function(require,module,exports){
-var utils = require('./utils.js');
-require('./base.js');
-require('./calendarheatmap.js');
-require('./speclines.js');
-require('./timeseries.js');
+},{"./base.js":1,"./utils.js":6}],3:[function(_dereq_,module,exports){
+var utils = _dereq_('./utils.js');
+_dereq_('./base.js');
+_dereq_('./calendarheatmap.js');
+_dereq_('./speclines.js');
+_dereq_('./timeseries.js');
 
 module.exports = {
   utils: utils,
 };
 
-},{"./base.js":1,"./calendarheatmap.js":2,"./speclines.js":4,"./timeseries.js":5,"./utils.js":6}],4:[function(require,module,exports){
-require('./base.js');
-var utils = require('./utils.js');
+},{"./base.js":1,"./calendarheatmap.js":2,"./speclines.js":4,"./timeseries.js":5,"./utils.js":6}],4:[function(_dereq_,module,exports){
+_dereq_('./base.js');
+var utils = _dereq_('./utils.js');
 
 /* Draws several lines on a graph, based on some data and some specs. */
 d3.chart('Base').extend('SpecLines', {
@@ -483,9 +483,9 @@ d3.chart('Base').extend('SpecLines', {
 
 });
 
-},{"./base.js":1,"./utils.js":6}],5:[function(require,module,exports){
-require('./speclines.js');
-var utils = require('./utils.js');
+},{"./base.js":1,"./utils.js":6}],5:[function(_dereq_,module,exports){
+_dereq_('./speclines.js');
+var utils = _dereq_('./utils.js');
 
 /* Draws several lines on a graph, based on some data and some specs. */
 d3.chart('SpecLines').extend('TimeSeries', {
@@ -566,7 +566,7 @@ d3.chart('SpecLines').extend('TimeSeries', {
     // padding: utils.property([5, 0, 100, 30]),
 });
 
-},{"./speclines.js":4,"./utils.js":6}],6:[function(require,module,exports){
+},{"./speclines.js":4,"./utils.js":6}],6:[function(_dereq_,module,exports){
 // Some helper functions
 
 module.exports = {};
@@ -737,4 +737,3 @@ module.exports.dottedGet = function(selectors, d) {
 },{}]},{},[3])
 (3)
 });
-;
